@@ -5,6 +5,8 @@ orbs:
   eb: circleci/aws-elastic-beanstalk@2.0.1
 jobs:
   build:
+    docker:
+      - image: cimg/base:stable
     steps:
       - node/install:
           node-version: 18.12.0
