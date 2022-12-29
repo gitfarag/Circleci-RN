@@ -11,8 +11,8 @@ jobs:
       - node/install:
           node-version: 18.12.0
       - aws-cli/setup
-      - eb/setup
       - checkout
+      - eb/setup
       - run:
           name: Install server dependencies
           command: npm run install:server
