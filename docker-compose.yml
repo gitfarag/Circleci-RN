@@ -1,0 +1,54 @@
+version: "3.8"
+
+# The services of your app
+services:
+  # Database service
+  database:
+    # Docker image
+    image: postgres:14
+    # Restart policy
+    restart: always
+    # Environment variables
+    environment:
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+    # Volume for persistent data
+    volumes:
+      - database-data:/var/lib/postgresql/data
+
+  # API service
+  server:
+    # Dockerfile
+    build: server/
+    # Restart policy
+    restart: on-failure
+    # Environment variables
+    env_file:
+      - .server.env
+    # Port mapping
+    ports:
+      - 3001:3001
+    # Link to the database service
+    depends_on:
+      - database
+    # Volume for persistent data
+    volumes:
+      - server-data:/app/storage
+
+  # Website service
+  website:
+    # Dockerfile
+    build: website/
+    # Restart policy
+    restart: on-failure
+    # Port mapping
+    ports:
+      - 3000:3000
+    # Link to the API service
+    depends_on:
+      - server
+  network_mode: host
+
+# Volumes
+volumes:
+  database-data:
+  server-data:

@@ -1,0 +1,11 @@
+
+{
+    "scripts": {
+        "install:server": "cd server && npm install",
+        "build:server": "cd server && npm run build",
+        "install:website": "cd website && npm run install",
+        "build:website": "cd website && npm run build",
+        "deploy:server": "cd server && npm run deploy",
+        "deploy:website": "cd website && npm run deploy"
+    }
+}
