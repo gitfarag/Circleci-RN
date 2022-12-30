@@ -49,7 +49,7 @@ const Home = () => {
     <>
     <Container>
             <h1 className="text-light text-center p-4">
-                E2E simple CRUD APP task 1
+                Udacity Third Project 
             </h1>
         <Row>
             <Col className="d-flex f-col justify-content-center m-4">
