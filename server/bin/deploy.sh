@@ -1,2 +1,1 @@
 eb deploy
-eb setenv ENV=dev PORT=3001 POSTGRES_USER=postgres POSTGRES_PASSWORD=*00123*Aa POSTGRES_HOST=database-1.ck1ntavp12rx.us-east-1.rds.amazonaws.com POSTGRES_DB=postgres POSTGRES_TEST_DB=test_db POSTGRES_PORT=5432

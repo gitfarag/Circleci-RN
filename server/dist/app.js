@@ -35,6 +35,9 @@ dotenv_1.default.config();
 const app = (0, express_1.default)();
 const port = process.env.PORT;
 app.use((0, cors_1.default)(), (0, express_1.json)(), (0, helmet_1.default)());
+app.get('/', (req, res) => {
+    res.send('REST-API WORKING >>>');
+});
 app.use("/api", router_1.default);
 app.listen(port, () => {
     console.log(`App listening at http://localhost:${port}`);
