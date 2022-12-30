@@ -12,6 +12,15 @@ This project was deployed to aws using Circle CI/CD
 
 each service has its own readme file contains all the info
 
+## Screenshots
+
+all required screenshots in ./documentation/screenshots
+
+- aws services screen shots
+- circleci screenshots
+- pipelines
+- other
+
 ## Pipeline process
 
 - Install server dependencies
@@ -22,3 +31,9 @@ each service has its own readme file contains all the info
 - Deploy website to s3
 
 website deployed successfully
+server deployed successfully
+
+``
+front-end url : http://third-bocket.s3-website-us-east-1.amazonaws.com/
+
+api url : http://app-one-todo.eba-guiuub2i.us-east-1.elasticbeanstalk.com/
