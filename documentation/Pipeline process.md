@@ -15,9 +15,7 @@ git push origin main
 
 ### context for env vars
 
-i created context in Circleci
-i imported the context-name in workflows
-thats all
+set the eb environment vars from circle context as a pipeline
 
 ### orbs:
 
@@ -46,6 +44,4 @@ build
       - Install website dependencies
       - Build website
       - Deploy website to s3
-
-
 ```
