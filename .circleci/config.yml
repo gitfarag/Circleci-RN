@@ -16,6 +16,31 @@ jobs:
       - aws-cli/setup
       - checkout
       - eb/setup
+      # set Environment variables
+      - run:
+        name: set app env
+        command: echo $NODE_ENV
+              - run:
+        name: set PORT env
+        command: echo $PORT
+              - run:
+        name: set POSTGRES_DB env
+        command: echo $POSTGRES_DB
+              - run:
+        name: set POSTGRES_HOST env
+        command: echo $POSTGRES_HOST
+              - run:
+        name: set POSTGRES_PASSWORD env
+        command: echo $POSTGRES_PASSWORD
+              - run:
+        name: set POSTGRES_PORT env
+        command: echo $POSTGRES_PORT
+              - run:
+        name: set POSTGRES_TEST_DB env
+        command: echo $POSTGRES_TEST_DB
+              - run:
+        name: set POSTGRES_USER env
+        command: echo $POSTGRES_USER
       # installing server dependencies
       - run:
           name: Install server dependencies
@@ -49,7 +74,9 @@ workflows:
   build-deploy:
     jobs:
       - build:
-          filters:
-            branches:
-              only:
-                - main
+          context:
+            - rn-context
+            filters:
+              branches:
+                only:
+                  - main
