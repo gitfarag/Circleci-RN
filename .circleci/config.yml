@@ -19,7 +19,7 @@ jobs:
       # set Environment variables
       - run:
         name: set app env
-        command: echo NODE_ENV
+        command: echo $NODE_ENV
       # installing server dependencies
       - run:
           name: Install server dependencies
