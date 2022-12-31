@@ -20,25 +20,25 @@ jobs:
       - run:
         name: set app env
         command: echo $NODE_ENV
-              - run:
+      - run:
         name: set PORT env
         command: echo $PORT
-              - run:
+      - run:
         name: set POSTGRES_DB env
         command: echo $POSTGRES_DB
-              - run:
+      - run:
         name: set POSTGRES_HOST env
         command: echo $POSTGRES_HOST
-              - run:
+      - run:
         name: set POSTGRES_PASSWORD env
         command: echo $POSTGRES_PASSWORD
-              - run:
+      - run:
         name: set POSTGRES_PORT env
         command: echo $POSTGRES_PORT
-              - run:
+      - run:
         name: set POSTGRES_TEST_DB env
         command: echo $POSTGRES_TEST_DB
-              - run:
+      - run:
         name: set POSTGRES_USER env
         command: echo $POSTGRES_USER
       # installing server dependencies
