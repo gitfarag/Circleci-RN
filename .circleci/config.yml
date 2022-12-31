@@ -75,7 +75,7 @@ workflows:
     jobs:
       - build:
           context: rn-context
-            filters:
-              branches:
-                only:
-                  - main
+          filters:
+            branches:
+              only:
+                - main
