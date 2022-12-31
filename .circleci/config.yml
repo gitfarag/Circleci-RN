@@ -53,8 +53,8 @@ workflows:
   build-deploy:
     jobs:
       - build:
+          filters:
+            branches:
+              only:
+                - main
           context: rn-context
-            filters:
-              branches:
-                only:
-                  - main
