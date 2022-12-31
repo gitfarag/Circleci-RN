@@ -1,4 +1,9 @@
-# deploying full stack app
+# important
+
+this project is documented in three seperate files in the documentaion folder :)
+this is just a brief and the app url at the end of this page ...
+
+## deploying full stack app
 
 This project was deployed to aws using Circle CI/CD.
 all the secrets and env variables are passed to circleci.
@@ -24,6 +29,7 @@ all required screenshots in ./documentation/screenshots
 
 ## Pipeline process
 
+- setting up environment variables from context in circleci
 - Install server dependencies
 - Build server
 - Deploy server to eb
