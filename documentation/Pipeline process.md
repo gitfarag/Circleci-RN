@@ -37,7 +37,7 @@ build
       - aws-cli/setup
       - checkout
       - eb/setup
-      - SET APP Environment variables
+      - SET APP Environment variables from circleci
       - SET AWS CREDENTIALS
       - Install server dependencies
       - Build server
