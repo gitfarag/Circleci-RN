@@ -17,9 +17,9 @@ jobs:
       - checkout
       - eb/setup
       # set Environment variables
-      - run:
-        name: set app env
-        command: echo $NODE_ENV
+      # - run:
+      #   name: set app env
+      #   command: echo $NODE_ENV
       # installing server dependencies
       - run:
           name: Install server dependencies
