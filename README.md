@@ -1,6 +1,7 @@
 # deploying full stack app
 
-This project was deployed to aws using Circle CI/CD
+This project was deployed to aws using Circle CI/CD.
+all the secrets and env variables are passed to circleci.
 
 ## Infrastructure description
 

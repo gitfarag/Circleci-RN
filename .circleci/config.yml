@@ -1,9 +1,12 @@
 version: 2.1
+# orbs that we need to our project
 orbs:
   node: circleci/node@5.0.0
   aws-cli: circleci/aws-cli@2.1.0
   eb: circleci/aws-elastic-beanstalk@2.0.1
+  # jobs that will be done
 jobs:
+  # build job
   build:
     docker:
       - image: cimg/node:18.2.0
@@ -13,21 +16,31 @@ jobs:
       - aws-cli/setup
       - checkout
       - eb/setup
+      # installing server dependencies
       - run:
           name: Install server dependencies
           command: npm run install:server
+      # build server
       - run:
           name: Build server
           command: npm run build:server
+      # test server
+      - run:
+          name: Testing api units
+          command: npm run test:server
+      #doploy sever to elasticbeastalk
       - run:
           name: Deploy server to eb
           command: npm run deploy:server
+      #install website dependencies
       - run:
           name: Install website dependencies
           command: npm run install:website
+      #build website
       - run:
           name: Build website
           command: npm run build:website
+      #deploying the files to s3
       - run:
           name: Deploy website to s3
           command: npm run deploy:website
