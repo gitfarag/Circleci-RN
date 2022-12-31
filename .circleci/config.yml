@@ -18,8 +18,11 @@ jobs:
       - eb/setup
       # set Environment variables
       - run:
-          name: set app env
+          name: SET APP Environment variables
           command: echo $NODE_ENV
+      - run:
+          name: SET AWS CREDENTIALS
+          command: echo $AWS_DEFAULT_REGION
       # installing server dependencies
       - run:
           name: Install server dependencies
